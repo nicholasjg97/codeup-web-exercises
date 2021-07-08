@@ -76,8 +76,8 @@ console.log(isTwo(random))
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(tipPercentage, billCost) {
-    return (tipPercentage * billCost);
+function calculateTip(tipPercentage, billCost){
+    return (parseFloat(billCost).toFixed(2) * (parseFloat(tipPercentage).toFixed(2)));
 }
 
 /**
@@ -87,6 +87,9 @@ function calculateTip(tipPercentage, billCost) {
  * then display the dollar amount they should tip
  */
 
+var billCost = prompt("What is the cost of the current bill?");
+var tipPercentage = prompt("What is the desired amount you would like to tip?");
+alert("The amount you will tip is $" + calculateTip(billCost, tipPercentage));
 
 /**
  * TODO:
@@ -102,3 +105,7 @@ function calculateTip(tipPercentage, billCost) {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(originalPrice, discountPercentage) {
+    return (parseFloat(originalPrice) - (parseFloat(originalPrice) * parseFloat(discountPercentage))).toFixed(2);
+}
