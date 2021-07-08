@@ -29,19 +29,19 @@
 // console.log(totalPayment);
 
 
-var chooseClass = prompt("Choose a class to enroll in");
-var classIsNotFull = confirm("PLease confirm class in not full");
-var chooseTime = prompt("Enter the desired class you'd prefer to have")
-var classScheduleCheck = confirm("Please confirm your new class works with your schedule");
-
-var studentEnrolled = classIsNotFull && classScheduleCheck;
-alert("Student enrollment status: " + studentEnrolled);
-
-
-var discountItemsOffer = 2;
-var itemsBought = prompt("How many items were bought?");
-var offerNotExpired = confirm("Please confirm offer is not expired");
-var premiumMemberCheck = confirm("Please confirm you are a premium member");
-var productDiscountApplied = offerNotExpired && (premiumMemberCheck || itemsBought >= discountItemsOffer);
-
-alert("The discount offer is applied: " + productDiscountApplied);
+// var chooseClass = prompt("Choose a class to enroll in");
+// var classIsNotFull = confirm("PLease confirm class in not full");
+// var chooseTime = prompt("Enter the desired class you'd prefer to have")
+// var classScheduleCheck = confirm("Please confirm your new class works with your schedule");
+//
+// var studentEnrolled = classIsNotFull && classScheduleCheck;
+// alert("Student enrollment status: " + studentEnrolled);
+//
+//
+// var discountItemsOffer = 2;
+// var itemsBought = prompt("How many items were bought?");
+// var offerNotExpired = confirm("Please confirm offer is not expired");
+// var premiumMemberCheck = confirm("Please confirm you are a premium member");
+// var productDiscountApplied = offerNotExpired && (premiumMemberCheck || itemsBought >= discountItemsOffer);
+//
+// alert("The discount offer is applied: " + productDiscountApplied);
