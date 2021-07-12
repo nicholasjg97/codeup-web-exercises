@@ -77,7 +77,8 @@ function analyzeColorSwitch(color) {
  * function to show it to the user.
  */
 
-
+// var chooseColor = prompt("What is your favorite color?");
+// alert(analyzeColor(chooseColor));
 
 /* ########################################################################## */
 
@@ -98,21 +99,23 @@ function analyzeColorSwitch(color) {
  * return value.
  */
 
-// function calculateTotal(luckyNumber, total) {
-//     if (luckyNumber === 0) {
-//         return ("No discount applied! You will pay the full amount");
-//     } else if (luckyNumber === 1) {
-//         return (total - (total * 0.10)) + " is your new discount applied total"
-//     } else if (luckyNumber === 2) {
-//         return (total - (total * 0.25)) + " is your new discount applied total";
-//     } else if (luckyNumber === 3) {
-//         return (total - (total * 0.35)) + " is your new discount applied total";
-//     } else if (luckyNumber === 4) {
-//         return (total - (total * 0.50)) + " is your new discount applied total";
-//     } else if (luckyNumber === 5) {
-//         return "Your total is $0. Your bill is free!";
-//     }
-// }
+function calculateTotal(luckyNumber, total) {
+    if (luckyNumber === 0) {
+        return (total).toFixed(2);
+    } else if (luckyNumber === 1) {
+        return (total - (total * 0.10)).toFixed(2);
+    } else if (luckyNumber === 2) {
+        return (total - (total * 0.25)).toFixed(2);
+    } else if (luckyNumber === 3) {
+        return (total - (total * 0.35)).toFixed(2);
+    } else if (luckyNumber === 4) {
+        return (total - (total * 0.50)).toFixed(2);
+    } else if (luckyNumber === 5) {
+        return (total - total).toFixed(2);
+    }
+}
+//
+// console.log(calculateTotal(2, 100));
 
 /**
  * TODO:
@@ -124,9 +127,10 @@ function analyzeColorSwitch(color) {
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 
-// let total = prompt("How much was your bill?");
-// alert("Your lucky number is " + luckyNumber);
-// calculateTotal(luckyNumber, total);
+let total = prompt("How much was your bill?");
+alert("Your lucky number is " + luckyNumber);
+alert("Your price before the discount was " + total);
+alert("Your price after the discount is " + calculateTotal(luckyNumber, total));
 
 /**
  * TODO:
