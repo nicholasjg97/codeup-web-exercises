@@ -176,6 +176,10 @@ function isNumeric(userInput) {
 
 // Refractored to Functions
 
+function isNumeric(userInput) {
+        return !isNaN(userInput);
+    }
+
 function isEvenOrOdd(number) {
     if (usersNumber % 2 === 0) {
         return alert("That number is even");
@@ -196,6 +200,20 @@ function negativeOrPositive(number) {
     }
 }
 
+if (confirm("Would you like to enter a number?")) {
+    var usersNumber = parseFloat(prompt("Enter a number"));
 
+    if (isNumeric(usersNumber)) {
+            if (isEvenOrOdd(usersNumber)) {
+            }
+            if (negativeOrPositive(usersNumber)) {
+            }
+            if (plusOneHundred(usersNumber)) {
+
+            }
+        } else {
+            alert("That is not a number");
+        }
+    }
 
 })()
