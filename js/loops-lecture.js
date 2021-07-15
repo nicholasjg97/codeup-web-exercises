@@ -1,3 +1,5 @@
+'use strict'
+
 // var pizzaSlices = 4;
 //
 // while (pizzaSlices > 0) {
@@ -60,5 +62,67 @@
 // var number = Math.ceil(Math.random() * 6);
 // var guess;
 // do {
-//     guess =
+//     guess = parseInt(prompt("Enter a number between 1 and 6: "));
+// } while (guess !== number);
+// alert("Your guess of " + guess + " matches the number " + number + "!");
+
+
+
+
+
+// for loops
+
+// var count = 100;
+// while (count >= 0) {
+//     console.log(count);
+//     count = count - 1;
 // }
+
+// "count" is the loop control variable;
+// The lcv gets initialized (var count = 100;)
+// The value of the lcv is checked in the conditional test
+// The lcv is output (console.log(count);)
+// The value of the lcv is modified inside the loop (count = count - 1;) -- otherwise it is an infinite loop
+
+
+// (lcv initialized ; conditional tested ; lcv modified)
+
+for (count = 100; count >= 0; count = count -1) {
+    console.log(count);
+}
+// seems long for impatient programmers
+
+
+// i is the iterator -- standard name for the loop control variable
+// for (i = 100; i >= 0; i--) {
+//     console.log(i);
+// }
+
+// Here the lcv is incremented after output
+// I never see 99
+// var i = 0;
+// while (i < 100) {
+//     console.log(i);
+//     i = i + 1;
+// }
+
+// Here the lcv is incremented before output
+// I see 100
+var i = 0;
+while (i < 100) {
+    i = i + 1;
+    console.log(i)
+}
+
+//In a for loop, the lcv is modified last. Always last.
+// We see 99, then it's incremented. We never see 100
+// for (i = 0; i< 100; i++) {
+//     console.log(i);
+// }
+
+
+// You can change your starting point
+// You can change your end point
+// You can change by how much you step up or down
+// You can have a loop within a loop
+// You can have a conditional within a loop
