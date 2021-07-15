@@ -1,5 +1,3 @@
-'use strict'
-
 // var pizzaSlices = 4;
 //
 // while (pizzaSlices > 0) {
@@ -126,3 +124,37 @@
 // You can change by how much you step up or down
 // You can have a loop within a loop
 // You can have a conditional within a loop
+
+// for (i = 512; i > 0; i -= 24) {
+//     console.log(i);
+//     for (inner = 0; inner < 9; inner++){
+//         console.log(i + " plus " + inner + " equals " + (i + inner));
+//     }
+//     if (i < 50){
+//         console.log(i + " is such a cute little number! <3");
+//     }
+//
+// }
+
+
+// var words = "";
+// for (i = 0; 1 < 5; i++) {
+//     var word = prompt("Let's make a sentence! Enter a word!");
+//     if (word === "curses") {
+//         console.log("Ouch! This is a respectable program!")
+//         break;
+//     }
+//     words = words + " " + word;
+//     console.log("Your sentence is " + words);
+// }
+
+// var words = "";
+// for (i = 0; i < 5; i++) {
+//     var word = prompt("Let's make a sentence! Enter a word!");
+//     if (word === "curses") {
+//         console.log("Ouch! This is a respectable program!")
+//         continue;
+//     }
+//     words = words + " " + word;
+//     console.log("Your sentence is " + words);
+// }
