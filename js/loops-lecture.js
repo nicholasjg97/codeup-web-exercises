@@ -87,9 +87,9 @@
 
 // (lcv initialized ; conditional tested ; lcv modified)
 
-for (count = 100; count >= 0; count = count -1) {
-    console.log(count);
-}
+// for (count = 100; count >= 0; count = count -1) {
+//     console.log(count);
+// }
 // seems long for impatient programmers
 
 
@@ -108,11 +108,11 @@ for (count = 100; count >= 0; count = count -1) {
 
 // Here the lcv is incremented before output
 // I see 100
-var i = 0;
-while (i < 100) {
-    i = i + 1;
-    console.log(i)
-}
+// var i = 0;
+// while (i < 100) {
+//     i = i + 1;
+//     console.log(i)
+// }
 
 //In a for loop, the lcv is modified last. Always last.
 // We see 99, then it's incremented. We never see 100
