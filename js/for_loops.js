@@ -1,8 +1,8 @@
-function showMultiplicationTable(input) {
-    for (let i = 1; i < 11; i++) {
-        console.log(input + " * " + i + " = " + (input * i));
-    }
-}
+// function showMultiplicationTable(input) {
+//     for (i = 1; i < 11; i++) {
+//         console.log(input + " * " + i + " = " + (input * i));
+//     }
+// }
 
 
 // function randomOddEven() {
