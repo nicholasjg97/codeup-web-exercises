@@ -1,21 +1,39 @@
-'use strict'
-
-function showMultiplicationTable(input) {
-    for (let i = 1; i < 11; i++) {
-        console.log(input * i);
-    }
-}
-
-
-// var i = Math.floor(Math.random() * 200) + 20;
-// for (i > 0; i < 11; i++) {
-//     if (i % 2 === 0) {
-//         console.log("The number " + i + " is even.")
-//     } else {
-//         console.log("The number " + i + " is odd.")
+// function showMultiplicationTable(input) {
+//     for (let i = 1; i < 11; i++) {
+//         console.log(input * i);
 //     }
 // }
 
-// for (number) {
-//
+
+// function randomOddEven() {
+//      for (let i = 0; i <= 10; i++) {
+//         let randomNumber = Math.floor(Math.random() * 180) + 20;
+//         if (randomNumber % 2 === 0) {
+//             console.log("The number " + randomNumber + " is even.")
+//         } else {
+//             console.log("The number " + randomNumber + " is odd.")
+//         }
+//     }
 // }
+// randomOddEven();
+
+
+// for (let i = 1; i < 11; i++) {
+//     let randomNumber = Math.floor(Math.random() * 180) + 20;
+//     if (randomNumber % 2 === 0) {
+//         console.log("The number " + randomNumber + " is even.")
+//     } else {
+//         console.log("The number " + randomNumber + " is odd.")
+//     }
+// }
+
+// var j = 1;
+// for (i = 1; i < 10; i++) {
+//     console.log(i * j);
+//     j = j.toString() + 1;
+// }
+
+// for (i = 100; i > 0; i -= 5) {
+//     console.log(i);
+// }
+
