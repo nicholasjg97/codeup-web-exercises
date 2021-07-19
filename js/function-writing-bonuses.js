@@ -39,7 +39,7 @@ function isMultipleOfThree(input) {
 }
 
 function isMultipleOfThreeAndFive(input) {
-    if (input % 3 ===0 && input % 5 === 0) {
+    if (input % 3 === 0 && input % 5 === 0) {
         return true;
     }
 }
@@ -59,13 +59,59 @@ function isFalse(boolean) {
 }
 
 function isTruthy(input) {
-
+    if (input) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function isFalsy(input) {
-
+    if (!input) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function isVowel(letter) {
 
 }
+
+
+
+
+
+
+
+
+// Simple Function Drills
+
+function returnTwo() {
+    return 2;
+}
+console.log(returnTwo());
+
+
+function sayHowdy() {
+    return "Howdy!";
+}
+console.log(sayHowdy())
+
+
+function returnName() {
+    return "Nicholas";
+}
+console.log(returnName());
+
+
+function addThree(number) {
+    return number + 3;
+}
+console.log(addThree(5));
+
+
+function sayString(input) {
+    return input;
+}
+console.log(sayString('codeup'));
