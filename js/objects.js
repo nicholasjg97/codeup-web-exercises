@@ -165,10 +165,14 @@
      *   `showBookInfo` function.
      */
 
-    // function createBook(title, author) {
-    //     return books.index + " " + books.title + " " + books.author;
-    // }
-    //
-    // createBook()
+    function createBook(title, authorName, authorLastName) {
+        return {
+            title: title;
+            firstName: authorFirstName;
+            lastName: authorLastName;
+        }
+    }
+
+
 
 })();
