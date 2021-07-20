@@ -167,12 +167,11 @@
 
     function createBook(title, authorName, authorLastName) {
         return {
-            title: title;
-            firstName: authorFirstName;
-            lastName: authorLastName;
+            title: title,
+            firstName: authorFirstName,
+            lastName: authorLastName,
         }
     }
-
 
 
 })();
