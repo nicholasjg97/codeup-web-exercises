@@ -9,9 +9,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name) {
-    return ("Hello " + name +"!")
-}
+// function sayHello(name) {
+//     return ("Hello " + name +"!")
+// }
 
 /**
  * TODO:
@@ -21,9 +21,9 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
  */
 
-sayHello('Nicholas');
-var helloMessage = sayHello('Nicholas');
-console.log(helloMessage);
+// sayHello('Nicholas');
+// var helloMessage = sayHello('Nicholas');
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -32,8 +32,8 @@ console.log(helloMessage);
  * console.
  */
 
-var myName = "Nicholas";
-sayHello(myName)
+// var myName = "Nicholas";
+// sayHello(myName)
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -58,11 +58,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(number){
-    return number === 2;
-}
-isTwo(random);
-console.log(isTwo(random))
+// function isTwo(number){
+//     return number === 2;
+// }
+// isTwo(random);
+// console.log(isTwo(random))
 
 /**
  * TODO:
@@ -76,9 +76,9 @@ console.log(isTwo(random))
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(tipPercentage, billCost){
-    return (parseFloat(billCost).toFixed(2) * (parseFloat(tipPercentage).toFixed(2)));
-}
+// function calculateTip(tipPercentage, billCost){
+//     return (parseFloat(billCost).toFixed(2) * (parseFloat(tipPercentage).toFixed(2)));
+// }
 
 /**
  * TODO:
@@ -87,9 +87,9 @@ function calculateTip(tipPercentage, billCost){
  * then display the dollar amount they should tip
  */
 
-var billCost = prompt("What is the cost of the current bill?");
-var tipPercentage = prompt("What is the desired amount you would like to tip?");
-alert("The amount you will tip is $" + calculateTip(billCost, tipPercentage));
+// var billCost = prompt("What is the cost of the current bill?");
+// var tipPercentage = prompt("What is the desired amount you would like to tip?");
+// alert("The amount you will tip is $" + calculateTip(billCost, tipPercentage));
 
 /**
  * TODO:
@@ -106,6 +106,6 @@ alert("The amount you will tip is $" + calculateTip(billCost, tipPercentage));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(originalPrice, discountPercentage) {
-    return (parseFloat(originalPrice) - (parseFloat(originalPrice) * parseFloat(discountPercentage))).toFixed(2);
-}
+// function applyDiscount(originalPrice, discountPercentage) {
+//     return (parseFloat(originalPrice) - (parseFloat(originalPrice) * parseFloat(discountPercentage))).toFixed(2);
+// }
