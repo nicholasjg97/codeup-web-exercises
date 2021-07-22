@@ -50,20 +50,28 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
     // shoppers.forEach(function (shopper) {
     //     console.log("The current shopper being rung up is is " + shopper.name);
-    //
     //     if (shopper.amount > 200) {
     //         console.log(shopper.name + " spent over " + shopper.amount + ". With a 12% discount, the amount will be $" + (shopper.amount - shopper.amount * 0.12).toFixed(2));
     //     } else {
     //         console.log(shopper.name + " did not spend enough to qualify for the discount. They needed to spend an extra $" + (200 - shopper.amount));
     //     }
+    // })
+
+    // shoppers.forEach( function (shopper) {
+    //     var discountedAmount = calculateDiscount(shopper.amount, discountThreshold, discountPercentage);
+    //     var output = shopper.name + ' is purchasing ' + shopper.amount +
+    //         ' of stuff. He will get ' + discountedAmount +
+    //         ' off the purchase and pay ' +
+    //         (shopper.amount - discountedAmount) + '.';
+    //     console.log(output);
     // })
 
     /** TODO:
@@ -165,13 +173,15 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, authorName, authorLastName) {
+    function createBook(title, authorFirstName, authorLastName) {
         return {
             title: title,
             firstName: authorFirstName,
             lastName: authorLastName,
         }
     }
+
+
 
 
 })();
