@@ -14,51 +14,47 @@
   <br>
   <label for="password">Password:</label>
   <input type="password" name="password" id="password" placeholder="Enter your password">
-  <br>
-  <br>
-  <input type="submit">
 
 
   <br>
   <br>
 
 
-  <label for="bio">Enter some information about yourself</label>
-  <br>
-  <br>
-  <input type="textarea" name="bio" id="bio">
-  <br>
-  <br><input type="submit">
+  <h2>Enter some information about yourself</h2>
+  <input type="textarea" name="bio" id="bio" cols="20" rows="10" placeholder="Enter bio here">
 
 
   <br>
   <br>
 
 
-  <label for="question1">How did you here about us?</label>
+  <h2>How did you here about us?</h2>
+  <input type="checkbox" name="question1" id="billboard" value="billboard">
+  <label for="billboard">Billboard</label>
   <br>
+  <input type="checkbox" name="question1" id="radio ad" value="Radio Advertisement">
+  <label for="radio ad">Radio Advertisement</label>
   <br>
-  <input type="radio" id="question1" value="billboard">Billboard <br>
-  <input type="radio" id="question1" name="" value="Radio Advertisement">Radio Advertisement <br>
-  <input type="radio" id="question1" name="" value="Internet Advertisement">Internet Advertisement <br>
-  <input type="radio" id="question1" name="" value="Other">Other
+  <input type="checkbox" name="question1" id="internet ad" value="Internet Advertisement">
+  <label for="internet ad">Internet Advertisement</label>
   <br>
-  <br>
-  <input type="submit">
+  <input type="checkbox" name="question1" id="other" value="Other">
+  <label for="other">Other</label>
+
 
   <br>
   <br>
 
-  <label for="web-browser">What web browser are you using?</label>
-  <br>
-  <br>
+
+  <h2>What web browser are you using?</h2>
   <select name="web-browser">
     <option value="chrome">Google Chrome</option>
     <option value="firefox">Firefox</option>
     <option value="safari">Safari</option>
-
   </select>
-  
+  <br>
+  <br>
+  <input type="submit"> <input type="reset">
   
 </form>
 
