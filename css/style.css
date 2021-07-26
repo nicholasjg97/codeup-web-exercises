@@ -1,4 +1,55 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
 }
+
+h2 {
+    color: darkblue;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+body {
+    font-family: cursive;
+    background: slategray url("../../codeup-web-exercises/img/welcome-backimg.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+ul li {
+    list-style-type: upper-latin;
+ }
+
+ol li {
+    list-style-type: square;
+}
+
+table {
+    padding: 1px;
+}
+
+th {
+    font-size: 30px;
+}
+
+tr {
+    padding: 1px;
+}
+
+td {
+    padding: 10px;
+}
+
+a:hover {
+    color: gold;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:active {
+    color: ghostwhite;
+}
+
