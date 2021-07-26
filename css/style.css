@@ -1,5 +1,5 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: darkblue;
     text-decoration: underline;
     text-align: center;
 }
@@ -52,4 +52,3 @@ a:visited {
 a:active {
     color: ghostwhite;
 }
-
