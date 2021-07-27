@@ -12,9 +12,24 @@ h2 {
 
 body {
     font-family: cursive;
-    background: slategray url("../../codeup-web-exercises/img/welcome-backimg.jpeg");
-    background-size: cover;
-    background-position: center;
+    /*background: slategray url("../../codeup-web-exercises/img/welcome-backimg.jpeg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    background: linear-gradient(to left, whitesmoke, slategray);
+}
+
+.come-in {
+    animation: appear 2.5s;
+
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 ul li {
