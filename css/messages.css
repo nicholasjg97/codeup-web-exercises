@@ -15,12 +15,12 @@ body, html {
 
 .message-info {
     color: midnightblue;
-    background-color: lightskyblue;
+    background-color: #c3d5ff;
 }
 
 .message-success {
     color: darkgreen;
-    background-color: lightgreen;
+    background-color: #c5f2d2;
 }
 
 .message-warning {
