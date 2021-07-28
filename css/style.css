@@ -18,20 +18,6 @@ body {
     background: linear-gradient(to left, whitesmoke, slategray);
 }
 
-.come-in {
-    animation: appear 2.5s;
-
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100%;
-    }
-}
-
 ul li {
     list-style-type: upper-latin;
  }
@@ -66,4 +52,17 @@ a:visited {
 
 a:active {
     color: ghostwhite;
+}
+
+.come-in {
+    animation: appear 2.5s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
 }
