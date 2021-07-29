@@ -39,6 +39,8 @@ h2, h3 {
 
 section {
     display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
     /* enter needed declarations here */
 }
 
