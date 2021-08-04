@@ -7,27 +7,197 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-text">Pizza World</a>
-        </div>
-        <div class="container">
-            <a class="navbar-text">Order online</a>
-        </div>
-        <div class="container">
-            <a class="navbar-text">Menu</a>
-        </div class="container">
-
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Zip code" aria-label="Search">
-                <button class="btn btn-outline-secondary btn-small" type="button">Search stores near you!</button>
-            </form>
-        </div>
+    <nav class="nav-bar">
+        Pizza world
+        Order online
+        Menu
+        Zip code
+        Search stores near you
     </nav>
+    <div class="container">
 
-    <div class="jumbotron">
-        <h1>Welcome to Pizza World!</h1>
-        <img src="img/pizza.png" alt="pizza" class="img-fluid">
+        <div class="jumbotron">
+            <h1>Welcome to Pizza World!</h1>
+            <img src="img/pizza.png" alt="pizza" class="img-fluid">
+        </div>
+
+        <h2>Build your own pizza!</h2>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true"> <span class="badge badge-pill badge-secondary">1</span>Size and Crust</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="sauce-tab" data-toggle="tab" href="#sauce" role="tab" aria-controls="sauce" aria-selected="false"> <span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"> <span class="badge badge-pill badge-secondary">3</span> Toppings</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+
+                <div class="card tab-pane show active" id="size" role="tabpanel" aria-labelledby="size-tab">
+                    <div class="card-header bg-primary text-white">
+                        Choose size and crust
+                    </div>
+                    <div class="card-body">
+
+                        <div class="card">
+                            <div class="card-header">
+                                Hand Tossed
+                            </div>
+                            <p class="card-text p-2">Garlic seasoned crust with a rich, buttery taste</p>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Small (10")</p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Medium (12")</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Crispy Thin
+                            </div>
+                            <p class="card-text p-2">Thin enough for optimum crispy to crunchy ratio</p>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Medium (12")</p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Large (14")</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <input class="btn btn-primary" type="reset" value="Next Step >">
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card tab-pane" id="sauce" role="tabpanel" aria-labelledby="sauce-tab">
+                    <div class="card-header bg-primary text-white">
+                        Choose Cheese and Sauce
+                    </div>
+                    <div class="card-body">
+
+                        <div class="card">
+                            <div class="card-header">
+                                Cheese
+                            </div>
+                            <p class="card-text pt-3 pl-3">How Much?</p>
+                            <div class="p-2">
+                                <select class="custom-select">
+                                    <option selected>Regular</option>
+                                    <option>Light</option>
+                                    <option>Extra</option>
+                                    <option>Double</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Sauce
+                            </div>
+                            <p class="card-text pt-3 pl-3">What type?</p>
+                            <div class="p-2">
+                                <select class="custom-select" >
+                                    <option selected>Tomato Sauce</option>
+                                    <option>Marinara Sauce</option>
+                                    <option>BBQ Sauce</option>
+                                    <option>Alfredo Sauce</option>
+                                </select>
+                            </div>
+                            <p class="card-text pt-3 pl-3">How Much?</p>
+                            <div class="p-2">
+                                <select class="custom-select" >
+                                    <option selected>Normal</option>
+                                    <option>Light</option>
+                                    <option>Extra</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <input class="btn btn-primary" type="reset" value="Next Step >">
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card tab-pane" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+                    <div class="card-header bg-primary text-white">
+                        Choose Toppings
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-header">
+                                Choose Meats
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Small (10")</p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Medium (12")</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Choose Non-Meats
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Medium (12")</p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                    </div><p>Large (14")</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <input class="btn btn-primary" type="reset" value="Next Step >">
+                        </div>
+                </div>
+        </div>
+
     </div>
 
 </body>
