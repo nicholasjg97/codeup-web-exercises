@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Methods</title>
+    <style>
+        .highlight {
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Essential jQuery Methods</h1>
+
+<h2 id="leader">I am the leader</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis distinctio earum est exercitationem facere inventore laborum magnam minima, numquam porro vero voluptate? Animi, consequatur debitis deserunt iste quod recusandae!</p>
+
+<h2 id="follower">I am the follower</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloremque iure qui sequi sint, tenetur. Ab aliquid aut officia quisquam? Blanditiis hic magnam officia placeat possimus tempora velit! Eveniet, ut.</p>
+
+<button id="font-changer">Change the font</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossOrigin="anonymous"></script>
+<script>
+
+    // Don't forget the parenthesis after the method!
+    // otherwise the method doesn't work, you just get the method itself:
+    // var htmlMethod = $("#leader").html;
+    // alert(htmlMethod);
+    // You can get content from the page as follows:
+    // var followerContent = $("#follower").html();
+    // if (followerContent === "I am the follower"){
+    //     $("#leader").html("And don't you forget it!")
+    // }
+
+    $("#font-changer").click(function(){
+        var currentFontFamily = $("body").css("font-family");
+        // alert(currentFontFamily);
+        if (currentFontFamily === "Times" || currentFontFamily === "serif") {
+            $("body").css("font-family", "sans-serif");
+        } else {
+            $("body").css("font-family", "Times");
+        }
+    });
+
+    // $("h2").mouseenter(function() {
+    //     $(this).addClass("highlight");
+    // });
+    // $("h2").mouseleave(function () {
+    //     $(this).removeClass("highlight");
+    // });
+
+    // $("h2").hover(function() {
+    //     $(this).toggleClass("highlight");
+    // });
+
+    $("h2").hover(function(e) {
+        $(e.target).toggleClass("highlight");
+    });
+
+</script>
+</body>
+</html>
