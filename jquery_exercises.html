@@ -54,6 +54,22 @@
 
         // $("h1, p, li").css("background-color", "#FFF000");
 
+        $("h1").click(function() {
+            $(this).css("background-color", "lightgreen");
+        });
+
+        $("p").dblclick(function() {
+            $(this).css("font-size", "18px");
+        });
+
+        $("li").hover(
+            function() {
+            $(this).css("color", "red");
+        },
+            function() {
+            $(this).css("color", "black");
+        });
+
 </script>
 </body>
 </html>
