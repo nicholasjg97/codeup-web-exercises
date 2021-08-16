@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Attributes and CSS Exercises</title>
+    <style>
+        .invinsible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<button id="toggleText">Toggle Class</button>
+
+<dl>
+
+    <dt>How many national parks are there in total in the United States?</dt>
+    <dd>There are currently 63 national parks in the United States.</dd>
+
+    <dt>How do you become a park ranger?</dt>
+    <dd>Many National Park Service employees begin their careers as volunteers or as seasonal employees. </dd>
+
+    <dt>Can we swim in rivers and lakes?</dt>
+    <dd>Swimming is not recommended because most lakes and streams are dangerously cold.</dd>
+
+    <dt>How many people come to visit each year?</dt>
+    <dd>Last year there were 327 million national park visits in the United States</dd>
+
+    <dt>Are there general rules when visiting a national park or does each park have specific ones?</dt>
+    <dd>Yes, there are general rules when visiting national parks, and you will find this information under the official website.</dd>
+
+    <dt>Where can I find a map of all parks and specific parks?</dt>
+    <dd>We think the best way to see all national parks on a map is to use the Find Your Park website provided by the NPS</dd>
+
+    <dt>How do I make reservations for camping or staying in national parks?</dt>
+    <dd>Most of the campsites in national parks and national forests are on a first-come first serve basis, however there is also the opportunity to make reservations online</dd>
+
+    <dt>Who is in charge of the national parks?</dt>
+    <dd>All national parks in the United States are managed and and supervised by the National Park Service, which is a federal agency of the Department of Interior.</dd>
+
+    <dt>Are national parks open all year round?</dt>
+    <dd>This depends on the park. While most national parks are open year-round, there might be some entrances that are closed due to weather or construction.</dd>
+
+    <dt>Are there guided tours available?</dt>
+    <dd>Yes, each national park offers guided tours that can either be hosted by the National Park Service or by certified guides. </dd>
+
+</dl>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossOrigin="anonymous"></script>
+
+<script>
+
+    $("dd").addClass("invinsible");
+
+    $("#toggleText").click(function() {
+        $("dd").toggleClass("invinsible");
+    });
+
+    $("dt").click(function() {
+        $(this).css("background-color", "cornsilk");
+    });
+
+</script>
+
+</body>
+</html>
