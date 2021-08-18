@@ -31,7 +31,7 @@
 
         function reload() {
 
-            $.get("/data/inventory.json").done(function(data) {
+            $.get("data/inventory.json").done(function(data) {
 
                 data.forEach(function(inventory) {
 
@@ -57,8 +57,9 @@
         }
 
         reload();
-        $("#reset").click(function() {
-
+        $("reset").click(function() {
+            $("#insertProducts").html('');
+            reload();
         });
 
     });
