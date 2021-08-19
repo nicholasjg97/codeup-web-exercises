@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibmljaG9sYXNqZzk3IiwiYSI6ImNrc2oxaDcxcDBsNW0ydW41MGN5bXV5N3QifQ.ihrF3pCR4gaMFkRbIrGSpA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 7,
+        center: [-95.35, 29.75],
+    });
+    //
+    setTimeout(function() {
+        map.setZoom(3);
+        map.setStyle('mapbox://styles/mapbox/satellite-v9');
+        map.setCenter([-100.9431, 20.6047]);
+    }, 6000);
+</script>
+
+</body>
+</html>
