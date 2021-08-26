@@ -55,3 +55,7 @@ let longestEmail = users.reduce((emailAcc, email, index, array) => {
         return emailAcc;
     }
 }, []);
+
+let allNames = users.reduce((current, user) => {
+    return current + user.name + ', '
+}, '');
