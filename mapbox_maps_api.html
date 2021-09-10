@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API Exercise</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<!--map body-->
+<div id='map' style='width: 600px; height: 500px;'></div>
+
+<!--dropdown for zoom level-->
+
+<!--mapbox code reference-->
+<script src="js/keys.js"></script>
+<!--geocode reference-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<script>
+
+    // set the token for Mapbox API
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+
+    // draw map
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 9,
+        center: [-95.31789870319207, 29.809667998899464]
+    });
+
+    geocode("Houston, TX", MAPBOX_API_TOKEN).then(function(result) {
+        map.setCenter(result);
+        map.setZoom(10);
+    });
+
+    // an array of restaurant objects
+    var restaurants = [
+        {
+            name: 'Chef Hunan Bo',
+            address: '3237 Houston Ave, Houston, TX 77009',
+            message: 'Delicious chinese food!'
+        },
+        {
+            name: 'Pho Now',
+            address: '536 E Tidwell Rd, Houston, TX 77022',
+            message: 'Awesome!'
+        },
+        {
+            name: 'Riva\'s Italian Restaurant',
+            address: '1117 Missouri St, Houston, TX 77006',
+            message: "Best restaurant for a date!"
+        }];
+
+    // a function to place all markers on map
+    function placeMarkersAndPopups(restaurants, map) {
+        // correct way
+        restaurants.forEach(function(restaurant) {
+            placeMarker(restaurant, map);
+        });
+
+        // restaurants.forEach(function(restaurant) {
+        //     geocode(restaurant.address, MAPBOX_API_TOKEN).then(function (result) {
+        //         var popup = new mapboxgl.Popup().setHTML(restaurants[i]);
+        //         var marker = new mapboxgl.Marker()
+        //             .setLngLat(result)
+        //             .setPopup(popup)
+        //             .addTo(map);
+        //     });
+        // });
+    }
+
+    // a function to place an individual popup and marker on map
+    function placeMarker(restaurant, map) {
+        geocode(restaurant.address, MAPBOX_API_TOKEN).then(function (coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML('<h4>' + restaurant.name + '</h4>' + '<p>' + restaurant.message + '</p>');
+            new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .setPopup(popup)
+                .addTo(map);
+        });
+    }
+
+    placeMarkersAndPopups(restaurants, map);
+
+    // var popup1 = new mapboxgl.Popup().setHTML('<h1>Chef Hunan Bo</h1>');
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-95.37241393305281, 29.787875855633175])
+    //     .setPopup(popup1)
+    //     .addTo(map);
+    //
+    // var popup2 = new mapboxgl.Popup().setHTML('<h1>Pho Now</h1>');
+    // var marker2 = new mapboxgl.Marker()
+    //     .setLngLat([-95.39039287450737, 29.845466473937698])
+    //     .setPopup(popup2)
+    //     .addTo(map);
+    //
+    // var popup3 = new mapboxgl.Popup().setHTML('Riva's Italian Restaurant');
+    // var marker3 = new mapboxgl.Marker()
+    //     .setLngLat([-95.39247151071605, 29.746096843349253])
+    //     .setPopup(popup3)
+    //     .addTo(map);
+
+</script>
+
+
+</body>
+</html>
