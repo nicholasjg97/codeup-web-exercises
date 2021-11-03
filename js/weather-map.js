@@ -4,12 +4,13 @@
 // decided to make these global variables to easily access
 var longitude = -95.37111551036642;
 var latitude = 29.76325090045542;
+var userInput = $('#userInput');
 weatherInfo();
 
 
-// ------------------------Map--------------------------
+// -------------------Declaring Map--------------------------
 mapboxgl.accessToken = MAPBOX_API_TOKEN;
-let map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     zoom: 9,
@@ -22,18 +23,24 @@ var marker = new mapboxgl.Marker({draggable: true})
     .setLngLat([longitude, latitude])
     .addTo(map);
 
+marker.on('dragend', onDragEnd)
+
 // Adding functionality to marker?
-// marker.on('dragend', function() {
-//     let lngLat = marker.getLngLat();
-//     longitude = lngLat.lng
-//     latitude = lngLat.lat
-//     reverseGeocode(lngLat, MAPBOX_API_TOKEN).then(function (result) {
-//
-// });
+function onDragEnd(e) {
+    console.log(e)
+    longitude = e.target._lngLat.lng;
+    latitude = e.target._lngLat.lat;
+    reverseGeocode({lng: longitude, lat: latitude}, MAPBOX_API_TOKEN).then(function(result) {
+        console.log(result);
+        weatherInfo(result);
+        $('#currentCity').html(result);
+    });
+}
 
 
 
-// --------------Weather Map API (Houston)----------------
+
+// --------------Weather Map API DATA (Houston)----------------
 function weatherInfo() {
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         appid: WEATHER_MAP_KEY,
@@ -58,7 +65,7 @@ function displayInfo(data) {
         html += "<div class='card'>"
         html += '<div class="card-header">' + date + '</div>'
         html += '<ul class="list-group">'
-        html += '<li class="list-group-item">' + data.daily[i].temp.min + ' °F' + ' / ' + data.daily[i].temp.min + ' °F' + '</li>'
+        html += '<li class="list-group-item">' + data.daily[i].temp.min + ' °F' + ' / ' + data.daily[i].temp.max + ' °F' + '</li>'
         html += '<li class="list-group-item">' + 'Description: ' + data.daily[i].weather[0].description + '</li>'
         html += '<li class="list-group-item">' + 'Humidity: ' + data.daily[i].humidity + '</li>'
         html += '<li class="list-group-item">' + 'Wind: ' + data.daily[i].wind_speed + ' ' + wind + '</li>'
@@ -116,15 +123,21 @@ $('#button').click(function(e) {
 
 
 function searchInput() {
-    geocode($('#userInput').val(), MAPBOX_API_TOKEN).then(function (result) {
+    geocode(userInput.val(), MAPBOX_API_TOKEN).then(function (result) {
         console.log(result);
         longitude = result[0];
         latitude = result[1];
-        $('#currentCity').html($('#userInput').val());
+        var marker = new mapboxgl.Marker({draggable: true})
+            .setLngLat([longitude, latitude])
+            .addTo(map);
+        marker.on('dragend', onDragEnd);
+        $('#currentCity').html(userInput.val());
         map.flyTo({
             center: [longitude, latitude],
-            zoom: 7
+            zoom: 9
         });
+
         weatherInfo();
     });
+
 }
